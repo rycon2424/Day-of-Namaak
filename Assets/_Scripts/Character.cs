@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class WalkController : NetworkBehaviour {
+public class Character : NetworkBehaviour {
 
+    [Header("Base Statistics")]
+    public float health;
+    public float stamina;
+
+    [Header("Movement")]
 	public float speed = 10f;
 
-	[Header("Jump Cooldown")]
+	[Header("Jump")]
 	public bool jumpUse = true;
 	public float forceConst;
 	private Rigidbody selfRigidbody;
 
 	void Start () 
 	{
-		if (isLocalPlayer) {
+        if (isLocalPlayer) {
 			this.transform.GetChild (0).gameObject.GetComponent<Camera> ().enabled = true;
 			this.transform.GetChild (0).gameObject.GetComponent<AudioListener> ().enabled = true;
 		} else {
@@ -30,7 +35,8 @@ public class WalkController : NetworkBehaviour {
 	void Update () 
 	{
 
-		if (!isLocalPlayer)
+        #region movement
+        if (!isLocalPlayer)
 		{
 			return;
 		}
@@ -48,10 +54,12 @@ public class WalkController : NetworkBehaviour {
 			StartCoroutine(Cooldown());
 			jumpUse = false;
 		}
-	}
+        #endregion
+
+    }
 
 
-	IEnumerator Cooldown()
+    IEnumerator Cooldown()
 	{
 		yield return new WaitForSeconds (2f);
 		jumpUse = true;
