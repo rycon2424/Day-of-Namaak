@@ -788,10 +788,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1049406295223592, guid: 276193bbfb696364780c7c086a0adb3c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 276193bbfb696364780c7c086a0adb3c, type: 2}
   m_IsPrefabParent: 0
@@ -1163,6 +1159,11 @@ Prefab:
       propertyPath: defaultPlayer
       value: 
       objectReference: {fileID: 1933676855}
+    - target: {fileID: 114595378278294712, guid: b6f6828de84516746ba97fac94228b39,
+        type: 2}
+      propertyPath: whatToLoad
+      value: Archer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6f6828de84516746ba97fac94228b39, type: 2}
   m_IsPrefabParent: 0
