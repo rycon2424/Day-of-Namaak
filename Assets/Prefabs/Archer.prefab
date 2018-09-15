@@ -45,9 +45,23 @@ GameObject:
   - component: {fileID: 20452781927293110}
   - component: {fileID: 124510064097153226}
   - component: {fileID: 81623443058516426}
-  - component: {fileID: 114846664889126326}
   m_Layer: 0
   m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1902986398461678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4705405477886090}
+  m_Layer: 0
+  m_Name: ArrowSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,6 +77,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: -45.87}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children:
+  - {fileID: 4705405477886090}
   - {fileID: 4447239201099228}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,6 +90,19 @@ Transform:
   m_GameObject: {fileID: 1246269082604858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.016, y: 0.407, z: 0.54}
+  m_LocalScale: {x: 2, y: 0.5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 4233071847084370}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4705405477886090
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902986398461678}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.016, y: 0.271, z: 3.83}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
   m_Children: []
   m_Father: {fileID: 4233071847084370}
@@ -205,38 +233,9 @@ MonoBehaviour:
   speed: 10
   jumpUse: 1
   forceConst: 0
---- !u!114 &114846664889126326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1246269082604858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 39
-    i1: 97
-    i2: 147
-    i3: 187
-    i4: 251
-    i5: 105
-    i6: 99
-    i7: 100
-    i8: 120
-    i9: 12
-    i10: 124
-    i11: 8
-    i12: 106
-    i13: 10
-    i14: 219
-    i15: 60
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  arrow: {fileID: 1437288925939618, guid: 6c6e7fe4d9500ff44ad887b417ca65b3, type: 2}
+  maxCharge: 0
+  arrowSpawn: {fileID: 4705405477886090}
 --- !u!114 &114890176857999856
 MonoBehaviour:
   m_ObjectHideFlags: 1

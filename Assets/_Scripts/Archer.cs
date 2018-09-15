@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Archer : Character {
 
+    [Header("Shooting Related")]
     public GameObject arrow;
-
-	void Start () {
-		
-	}
+    public float maxCharge;
+    private float chargeTime;
+    public Transform arrowSpawn;
 	
 	void Update () {
 
@@ -16,17 +16,20 @@ public class Archer : Character {
 
 	}
 
-    private float chargeTime;
-
     private void Shooting() {
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            chargeTime += 1 * Time.deltaTime;
+            if (chargeTime <= maxCharge)
+            {
+                chargeTime += 1 * Time.deltaTime;
+            }
         }
         else if (Input.GetKeyUp(KeyCode.Mouse1))
         {
+            Instantiate(arrow,arrowSpawn.position,Quaternion.identity);
             arrow.GetComponent<Arrow>().ArrowShot(chargeTime);
+            chargeTime = 0;
         }
 
     }
