@@ -32,32 +32,27 @@ public class Character : NetworkBehaviour {
 		Cursor.visible = false;
 	}
 
-	void Update () 
-	{
-
-        #region movement
+    public void Movement()
+    {
         if (!isLocalPlayer)
-		{
-			return;
-		}
+        {
+            return;
+        }
 
-		float translation = Input.GetAxis ("Vertical") * speed;
-		float strafe = Input.GetAxis ("Horizontal") * speed;
-		translation *= Time.deltaTime;
-		strafe *= Time.deltaTime;
+        float translation = Input.GetAxis("Vertical") * speed;
+        float strafe = Input.GetAxis("Horizontal") * speed;
+        translation *= Time.deltaTime;
+        strafe *= Time.deltaTime;
 
-		transform.Translate (strafe, 0, translation);
+        transform.Translate(strafe, 0, translation);
 
-		if (Input.GetKey(KeyCode.Space) && jumpUse == true)
-		{
-			selfRigidbody.AddForce (0, forceConst, 0, ForceMode.Impulse);
-			StartCoroutine(Cooldown());
-			jumpUse = false;
-		}
-        #endregion
-
+        if (Input.GetKey(KeyCode.Space) && jumpUse == true)
+        {
+            selfRigidbody.AddForce(0, forceConst, 0, ForceMode.Impulse);
+            StartCoroutine(Cooldown());
+            jumpUse = false;
+        }
     }
-
 
     IEnumerator Cooldown()
 	{

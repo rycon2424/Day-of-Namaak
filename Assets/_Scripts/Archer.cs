@@ -13,6 +13,7 @@ public class Archer : Character {
 	void Update () {
 
         Shooting();
+        Movement();
 
 	}
 

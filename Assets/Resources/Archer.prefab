@@ -232,7 +232,7 @@ MonoBehaviour:
   stamina: 0
   speed: 10
   jumpUse: 1
-  forceConst: 0
+  forceConst: 5
   arrow: {fileID: 1437288925939618, guid: 6c6e7fe4d9500ff44ad887b417ca65b3, type: 2}
   maxCharge: 0
   arrowSpawn: {fileID: 4705405477886090}
@@ -267,7 +267,7 @@ MonoBehaviour:
     i14: 219
     i15: 60
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114975400177444634
 MonoBehaviour:
   m_ObjectHideFlags: 1
