@@ -10,7 +10,12 @@ public class Arrow : MonoBehaviour {
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.forward * force, ForceMode.Impulse);
+    }
+
+    public void ArrowShot(float chargetime) {
+
+        rb.AddForce(Vector3.forward * force * chargetime, ForceMode.Impulse);
+
     }
 
 }

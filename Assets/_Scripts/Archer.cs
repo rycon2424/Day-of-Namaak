@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class Archer : Character {
 
-	// Use this for initialization
+    public GameObject arrow;
+
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
+
+        Shooting();
+
 	}
+
+    private float chargeTime;
+
+    private void Shooting() {
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            chargeTime += 1 * Time.deltaTime;
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            arrow.GetComponent<Arrow>().ArrowShot(chargeTime);
+        }
+
+    }
 }
