@@ -38,7 +38,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4463607933779732}
-  - component: {fileID: 114878036832745192}
   - component: {fileID: 114700442001152006}
   - component: {fileID: 114584205956480770}
   - component: {fileID: 95442322789695018}
@@ -253,22 +252,6 @@ MonoBehaviour:
   sensitivity: 5
   smoothing: 0.5
   camera: {fileID: 1152784904539126}
---- !u!114 &114878036832745192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1662263949422448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc633118fdb2304f959a12726dd5466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  stamina: 100
-  speed: 10
-  jumpUse: 1
-  forceConst: 5
 --- !u!114 &114997595004953080
 MonoBehaviour:
   m_ObjectHideFlags: 1
