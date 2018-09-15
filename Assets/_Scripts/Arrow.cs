@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour {
 
+    private Archer a;
     private Rigidbody rb;
     public float force;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    public void ArrowShot(float chargetime) {
-
-        rb.AddForce(Vector3.forward * force * chargetime, ForceMode.Impulse);
-
+        a = GameObject.FindGameObjectWithTag("Archer").GetComponent<Archer>();
+        rb.AddForce(Vector3.forward * force * a.chargeTime, ForceMode.Impulse);
     }
 
 }
