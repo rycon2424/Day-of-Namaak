@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000022, guid: 9dc03f376968da14aa0ed005d11dbb62,
+  m_LightingDataAsset: {fileID: 112000024, guid: 9dc03f376968da14aa0ed005d11dbb62,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -749,7 +749,7 @@ Transform:
   m_Father: {fileID: 1421769290}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1248930358
+--- !u!1001 &1098034454
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1516,7 +1516,7 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 1049406295223592, guid: 276193bbfb696364780c7c086a0adb3c,
     type: 2}
-  m_PrefabInternal: {fileID: 1248930358}
+  m_PrefabInternal: {fileID: 1098034454}
 --- !u!1 &2110157124
 GameObject:
   m_ObjectHideFlags: 0

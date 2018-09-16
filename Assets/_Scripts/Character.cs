@@ -15,7 +15,7 @@ public class Character : NetworkBehaviour {
 	[Header("Jump")]
 	public bool jumpUse = true;
 	public float forceConst;
-	private Rigidbody selfRigidbody;
+	public Rigidbody selfRigidbody;
 
 	void Start () 
 	{
@@ -26,7 +26,6 @@ public class Character : NetworkBehaviour {
 			this.transform.GetChild (0).gameObject.GetComponent<Camera> ().enabled = false;
 			this.transform.GetChild (0).gameObject.GetComponent<AudioListener> ().enabled = false;
 		}
-
 		selfRigidbody = GetComponent<Rigidbody> ();
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;

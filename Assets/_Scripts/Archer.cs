@@ -7,6 +7,7 @@ public class Archer : Character {
     [Header("Shooting Related")]
     public GameObject arrow;
     public float maxCharge;
+
     public float chargeTime;
     public Transform arrowSpawn;
 	

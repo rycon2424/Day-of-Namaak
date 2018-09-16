@@ -659,12 +659,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: a1a9f244-e38f-442f-bdf1-df70363333b4
+  cloudProjectId: 57fac221-1c6c-4b09-af2d-da17468f2b57
   projectName: Day of Glory UnityVariant
-  organizationId: bosko0509
+  organizationId: tijnworks
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
